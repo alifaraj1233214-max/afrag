@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ali | Professional Crypto Trader</title>
+  <meta name="description" content="Ali — Elite cryptocurrency trader. Precision signals, institutional-grade research, and 1-on-1 mentorship for serious traders." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Noise texture overlay ────────────────────────────────── -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ── Ticker ───────────────────────────────────────────────── -->
+  <div class="ticker-bar" aria-label="Live market prices">
+    <div class="ticker-track" id="tickerTrack"></div>
+  </div>
+
+  <!-- ── Nav ──────────────────────────────────────────────────── -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#hero" class="nav-logo" aria-label="Ali Crypto home">
+        <div class="logo-mark">
+          <svg viewBox="0 0 28 28" fill="none"><polygon points="14,2 26,8 26,20 14,26 2,20 2,8" stroke="url(#lg1)" stroke-width="1.5" fill="rgba(99,102,241,0.08)"/><text x="14" y="18" text-anchor="middle" fill="url(#lg1)" font-size="11" font-weight="700" font-family="JetBrains Mono">A</text><defs><linearGradient id="lg1" x1="0" y1="0" x2="28" y2="28"><stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient></defs></svg>
+        </div>
+        <span class="logo-text">Ali<span class="logo-dot">.</span><span class="logo-suffix">trade</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#performance">Results</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact" class="nav-cta">
+          <span>Get Started</span>
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 8a.5.5 0 01.5-.5h7.793L9.146 5.354a.5.5 0 11.708-.708l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L11.293 8.5H3.5A.5.5 0 013 8z"/></svg>
+        </a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ════════════════════════════ HERO ════════════════════════════ -->
+    <section class="hero section-hero" id="hero" aria-labelledby="hero-heading">
+      <div class="hero-ambient" aria-hidden="true">
+        <div class="ambient-orb orb-1"></div>
+        <div class="ambient-orb orb-2"></div>
+        <div class="ambient-orb orb-3"></div>
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero-grid-overlay"></div>
+      </div>
+
+      <div class="container hero-layout">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            <span>Verified Elite Crypto Analyst</span>
+            <span class="eyebrow-divider" aria-hidden="true">·</span>
+            <span>8+ Years Experience</span>
+          </div>
+
+          <h1 class="hero-title" id="hero-heading">
+            Trade With <br />
+            <span class="title-highlight">Conviction</span><span class="title-cursor" aria-hidden="true">_</span>
+          </h1>
+
+          <p class="hero-desc">
+            Ali delivers institutional-grade market intelligence, precision entry signals,
+            and hands-on mentorship — built for traders who refuse to leave returns to chance.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#services" class="btn btn-primary">
+              <span>Explore Services</span>
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </a>
+            <a href="#performance" class="btn btn-ghost">
+              View Track Record
+            </a>
+          </div>
+
+          <div class="hero-metrics" role="list" aria-label="Key statistics">
+            <div class="metric" role="listitem">
+              <div class="metric-value"><span data-count="8" class="count-num">0</span><span class="metric-suffix">yr</span></div>
+              <div class="metric-label">Trading</div>
+            </div>
+            <div class="metric-sep" aria-hidden="true"></div>
+            <div class="metric" role="listitem">
+              <div class="metric-value"><span data-count="2400" class="count-num">0</span><span class="metric-suffix">+</span></div>
+              <div class="metric-label">Signals</div>
+            </div>
+            <div class="metric-sep" aria-hidden="true"></div>
+            <div class="metric" role="listitem">
+              <div class="metric-value"><span data-count="94" class="count-num">0</span><span class="metric-suffix">%</span></div>
+              <div class="metric-label">Accuracy</div>
+            </div>
+            <div class="metric-sep" aria-hidden="true"></div>
+            <div class="metric" role="listitem">
+              <div class="metric-value"><span data-count="1200" class="count-num">0</span><span class="metric-suffix">+</span></div>
+              <div class="metric-label">Mentored</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="chart-card glass-card">
+            <div class="chart-card-header">
+              <div class="chart-pair">BTC / USDT</div>
+              <div class="chart-badge up">▲ +4.2%</div>
+            </div>
+            <div class="chart-price mono">$68,420<span class="chart-cents">.00</span></div>
+            <div class="chart-canvas-wrap">
+              <canvas id="miniChart" width="320" height="90" aria-label="BTC price chart"></canvas>
+            </div>
+            <div class="chart-footer">
+              <span class="chart-vol">Vol 24h: <span class="mono">$38.4B</span></span>
+              <span class="chart-signal">Signal: <span class="signal-buy">BUY</span></span>
+            </div>
+          </div>
+          <div class="hero-signal-feed glass-card">
+            <div class="signal-feed-title">Latest Signals</div>
+            <div class="signal-item">
+              <span class="sig-tag long">LONG</span>
+              <span class="sig-pair mono">ETH/USDT</span>
+              <span class="sig-return up">+22.4%</span>
+            </div>
+            <div class="signal-item">
+              <span class="sig-tag short">SHORT</span>
+              <span class="sig-pair mono">BNB/USDT</span>
+              <span class="sig-return up">+11.8%</span>
+            </div>
+            <div class="signal-item">
+              <span class="sig-tag long">LONG</span>
+              <span class="sig-pair mono">SOL/USDT</span>
+              <span class="sig-return up">+67.3%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-label="Scroll down">
+        <span class="scroll-label">Scroll</span>
+        <div class="scroll-bar" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ── Marquee ───────────────────────────────────────────────── -->
+    <div class="marquee-strip" aria-hidden="true">
+      <div class="marquee-inner">
+        <span>On-Chain Analytics</span><span class="mx">◆</span>
+        <span>Wyckoff Method</span><span class="mx">◆</span>
+        <span>Derivatives Trading</span><span class="mx">◆</span>
+        <span>DeFi Strategy</span><span class="mx">◆</span>
+        <span>Risk Management</span><span class="mx">◆</span>
+        <span>Altcoin Rotation</span><span class="mx">◆</span>
+        <span>Macro Economics</span><span class="mx">◆</span>
+        <span>Technical Analysis</span><span class="mx">◆</span>
+        <span>On-Chain Analytics</span><span class="mx">◆</span>
+        <span>Wyckoff Method</span><span class="mx">◆</span>
+        <span>Derivatives Trading</span><span class="mx">◆</span>
+        <span>DeFi Strategy</span><span class="mx">◆</span>
+        <span>Risk Management</span><span class="mx">◆</span>
+        <span>Altcoin Rotation</span><span class="mx">◆</span>
+        <span>Macro Economics</span><span class="mx">◆</span>
+        <span>Technical Analysis</span><span class="mx">◆</span>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════ ABOUT ════════════════════════════ -->
+    <section class="section about-section" id="about" aria-labelledby="about-heading">
+      <div class="container about-grid">
+
+        <div class="about-media" data-aos="fade-right">
+          <div class="about-frame">
+            <div class="about-img-placeholder" aria-label="Ali's photo placeholder">
+              <svg viewBox="0 0 80 80" fill="none" aria-hidden="true"><circle cx="40" cy="28" r="16" stroke="url(#ap)" stroke-width="1.8"/><path d="M8 72c0-17.673 14.327-32 32-32s32 14.327 32 32" stroke="url(#ap)" stroke-width="1.8" stroke-linecap="round"/><defs><linearGradient id="ap" x1="0" y1="0" x2="80" y2="80"><stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient></defs></svg>
+              <span>Ali's Photo</span>
+            </div>
+            <div class="frame-glow-tl" aria-hidden="true"></div>
+            <div class="frame-glow-br" aria-hidden="true"></div>
+          </div>
+          <div class="about-float-card glass-card" aria-hidden="true">
+            <div class="float-icon">₿</div>
+            <div class="float-info">
+              <div class="float-name">BTC Expert</div>
+              <div class="float-since">Since 2016</div>
+            </div>
+          </div>
+          <div class="about-float-card about-float-card--br glass-card" aria-hidden="true">
+            <div class="float-stat-val mono">+147%</div>
+            <div class="float-stat-lbl">Best Trade 2024</div>
+          </div>
+        </div>
+
+        <div class="about-content" data-aos="fade-left">
+          <p class="overline" id="about-heading">About Ali</p>
+          <h2 class="section-title">From Curious Observer <br>to <span class="gradient-text">Market Authority</span></h2>
+          <p class="body-text">Ali discovered Bitcoin in 2015 and recognised that cryptocurrency markets were the defining financial opportunity of his generation. After years mastering technical analysis, Wyckoff methodology, and on-chain analytics, he went full-time in 2018.</p>
+          <p class="body-text">Today, Ali manages a multi-million dollar digital asset portfolio, provides institutional-grade research to private clients globally, and mentors the next generation of serious traders.</p>
+
+          <div class="skills-wrap" aria-label="Areas of expertise">
+            <span class="skill-tag">Technical Analysis</span>
+            <span class="skill-tag">Wyckoff Method</span>
+            <span class="skill-tag">On-Chain Metrics</span>
+            <span class="skill-tag">DeFi Protocols</span>
+            <span class="skill-tag">Derivatives</span>
+            <span class="skill-tag">Risk Management</span>
+          </div>
+
+          <div class="about-cta-row">
+            <a href="#contact" class="btn btn-primary">Work With Ali</a>
+            <a href="#performance" class="btn btn-outline">See Track Record</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ════════════════════════════ SERVICES ════════════════════════════ -->
+    <section class="section services-section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <header class="section-header" data-aos="fade-up">
+          <p class="overline" id="services-heading">What I Offer</p>
+          <h2 class="section-title">Professional <span class="gradient-text">Services</span></h2>
+          <p class="section-sub">Everything you need to trade with confidence — from raw intelligence to hands-on guidance.</p>
+        </header>
+
+        <div class="services-grid">
+
+          <article class="service-card glass-card gradient-border" data-aos="fade-up" data-aos-delay="0">
+            <div class="svc-icon-wrap indigo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3>Trading Signals</h3>
+            <p>Precision BUY / SELL / SHORT alerts with entry, targets, and stop-loss — delivered via Telegram in real time.</p>
+            <ul class="svc-list" aria-label="Features">
+              <li><span class="check" aria-hidden="true">✓</span>Spot &amp; futures coverage</li>
+              <li><span class="check" aria-hidden="true">✓</span>Risk/reward &gt; 3:1 minimum</li>
+              <li><span class="check" aria-hidden="true">✓</span>Backtested strategies</li>
+              <li><span class="check" aria-hidden="true">✓</span>Weekly performance reports</li>
+            </ul>
+            <a href="#pricing" class="svc-link" aria-label="View Signals pricing">View Plans <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card glass-card gradient-border featured-svc" data-aos="fade-up" data-aos-delay="80">
+            <div class="featured-label" aria-label="Most popular service">Most Popular</div>
+            <div class="svc-icon-wrap cyan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3>1-on-1 Mentorship</h3>
+            <p>Personalised coaching to transform you from novice to consistently profitable — at your own pace, on your terms.</p>
+            <ul class="svc-list" aria-label="Features">
+              <li><span class="check" aria-hidden="true">✓</span>Custom learning roadmap</li>
+              <li><span class="check" aria-hidden="true">✓</span>Weekly live sessions</li>
+              <li><span class="check" aria-hidden="true">✓</span>Trade review &amp; feedback</li>
+              <li><span class="check" aria-hidden="true">✓</span>Lifetime community access</li>
+            </ul>
+            <a href="#pricing" class="svc-link" aria-label="Apply for Mentorship">Apply Now <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card glass-card gradient-border" data-aos="fade-up" data-aos-delay="160">
+            <div class="svc-icon-wrap indigo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            </div>
+            <h3>Portfolio Management</h3>
+            <p>Hands-off portfolio construction and rebalancing using proven allocation frameworks tailored to your risk profile.</p>
+            <ul class="svc-list" aria-label="Features">
+              <li><span class="check" aria-hidden="true">✓</span>Custom allocation strategy</li>
+              <li><span class="check" aria-hidden="true">✓</span>Monthly rebalancing</li>
+              <li><span class="check" aria-hidden="true">✓</span>Full transparency reports</li>
+              <li><span class="check" aria-hidden="true">✓</span>Tax-optimised exits</li>
+            </ul>
+            <a href="#contact" class="svc-link" aria-label="Enquire about Portfolio Management">Enquire <span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="service-card glass-card gradient-border" data-aos="fade-up" data-aos-delay="240">
+            <div class="svc-icon-wrap cyan">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <h3>Market Analysis</h3>
+            <p>In-depth weekly research covering macro trends, BTC dominance cycles, sector rotation, and key catalysts.</p>
+            <ul class="svc-list" aria-label="Features">
+              <li><span class="check" aria-hidden="true">✓</span>Weekly deep-dive reports</li>
+              <li><span class="check" aria-hidden="true">✓</span>On-chain data insights</li>
+              <li><span class="check" aria-hidden="true">✓</span>Sentiment &amp; fear/greed</li>
+              <li><span class="check" aria-hidden="true">✓</span>Altcoin season tracker</li>
+            </ul>
+            <a href="#pricing" class="svc-link" aria-label="Subscribe to Market Analysis">Subscribe <span aria-hidden="true">→</span></a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════ PERFORMANCE ════════════════════════════ -->
+    <section class="section perf-section" id="performance" aria-labelledby="perf-heading">
+      <div class="container">
+        <header class="section-header" data-aos="fade-up">
+          <p class="overline" id="perf-heading">Track Record</p>
+          <h2 class="section-title">Verified <span class="gradient-text">Performance</span></h2>
+          <p class="section-sub">A selection of closed trades from the past 24 months. All verified, all real.</p>
+        </header>
+
+        <div class="perf-grid">
+          <article class="perf-card glass-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="perf-top">
+              <span class="perf-pair mono">BTC/USDT</span>
+              <span class="perf-dir long" aria-label="Long trade">LONG</span>
+            </div>
+            <div class="perf-return" aria-label="147% return">+147%</div>
+            <div class="perf-bar-wrap" aria-hidden="true">
+              <div class="perf-bar" style="--w:100%"></div>
+            </div>
+            <div class="perf-detail">
+              <span class="mono">$28,400 → $70,200</span>
+              <span class="perf-period">Q4 2023 – Q1 2024</span>
+            </div>
+          </article>
+
+          <article class="perf-card glass-card" data-aos="fade-up" data-aos-delay="60">
+            <div class="perf-top">
+              <span class="perf-pair mono">SOL/USDT</span>
+              <span class="perf-dir long" aria-label="Long trade">LONG</span>
+            </div>
+            <div class="perf-return" aria-label="213% return">+213%</div>
+            <div class="perf-bar-wrap" aria-hidden="true">
+              <div class="perf-bar" style="--w:100%"></div>
+            </div>
+            <div class="perf-detail">
+              <span class="mono">$22 → $69</span>
+              <span class="perf-period">Q4 2023</span>
+            </div>
+          </article>
+
+          <article class="perf-card glass-card" data-aos="fade-up" data-aos-delay="120">
+            <div class="perf-top">
+              <span class="perf-pair mono">ETH/USDT</span>
+              <span class="perf-dir long" aria-label="Long trade">LONG</span>
+            </div>
+            <div class="perf-return" aria-label="89% return">+89%</div>
+            <div class="perf-bar-wrap" aria-hidden="true">
+              <div class="perf-bar" style="--w:59%"></div>
+            </div>
+            <div class="perf-detail">
+              <span class="mono">$1,820 → $3,440</span>
+              <span class="perf-period">Q1 2024</span>
+            </div>
+          </article>
+
+          <article class="perf-card glass-card" data-aos="fade-up" data-aos-delay="180">
+            <div class="perf-top">
+              <span class="perf-pair mono">BNB/USDT</span>
+              <span class="perf-dir short" aria-label="Short trade">SHORT</span>
+            </div>
+            <div class="perf-return" aria-label="38% return">+38%</div>
+            <div class="perf-bar-wrap" aria-hidden="true">
+              <div class="perf-bar" style="--w:25%"></div>
+            </div>
+            <div class="perf-detail">
+              <span class="mono">$342 → $212</span>
+              <span class="perf-period">Q2 2022</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="perf-disclaimer">Past performance does not guarantee future results. Crypto trading involves significant risk. Manage risk responsibly.</p>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════ PRICING ════════════════════════════ -->
+    <section class="section pricing-section" id="pricing" aria-labelledby="pricing-heading">
+      <div class="container">
+        <header class="section-header" data-aos="fade-up">
+          <p class="overline" id="pricing-heading">Transparent Pricing</p>
+          <h2 class="section-title">Choose Your <span class="gradient-text">Edge</span></h2>
+          <p class="section-sub">No hidden fees. Cancel anytime. Start with the plan that fits your ambition.</p>
+        </header>
+
+        <div class="pricing-grid">
+
+          <article class="pricing-card glass-card" data-aos="fade-up" data-aos-delay="0" aria-label="Starter plan">
+            <div class="plan-name">Starter</div>
+            <div class="plan-price">
+              <span class="plan-currency">$</span>
+              <span class="plan-amount">49</span>
+              <span class="plan-cycle">/mo</span>
+            </div>
+            <p class="plan-desc">For traders just starting their crypto journey.</p>
+            <ul class="plan-features" aria-label="Starter plan features">
+              <li><span class="pf-check" aria-hidden="true"></span>Up to 5 signals/week</li>
+              <li><span class="pf-check" aria-hidden="true"></span>Basic market reports</li>
+              <li><span class="pf-check" aria-hidden="true"></span>Community Telegram access</li>
+              <li><span class="pf-check" aria-hidden="true"></span>Monthly newsletter</li>
+              <li class="pf-disabled" aria-label="Not included"><span class="pf-x" aria-hidden="true"></span>1-on-1 sessions</li>
+              <li class="pf-disabled" aria-label="Not included"><span class="pf-x" aria-hidden="true"></span>Portfolio review</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline btn-full">Get Started</a>
+          </article>
+
+          <article class="pricing-card glass-card pricing-card--featured" data-aos="fade-up" data-aos-delay="100" aria-label="Professional plan, most popular">
+            <div class="plan-badge" aria-label="Most popular">Most Popular</div>
+            <div class="plan-name">Professional</div>
+            <div class="plan-price">
+              <span class="plan-currency">$</span>
+              <span class="plan-amount">149</span>
+              <span class="plan-cycle">/mo</span>
+            </div>
+            <p class="plan-desc">For serious traders ready to level up their edge.</p>
+            <ul class="plan-features" aria-label="Professional plan features">
+              <li><span class="pf-check" aria-hidden="true"></span>Unlimited signals</li>
+              <li><span class="pf-check" aria-hidden="true"></span>Full research reports</li>
+              <li><span class="pf-check" aria-hidden="true"></span>Priority Telegram group</li>
+              <li><span class="pf-check" aria-hidden="true"></span>2× monthly 1-on-1 sessions</li>
+              <li><span class="pf-check" aria-hidden="true"></span>Trade journal review</li>
+              <li class="pf-disabled" aria-label="Not included"><span class="pf-x" aria-hidden="true"></span>Portfolio management</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-full">Start Now</a>
+          </article>
+
+          <article class="pricing-card glass-card" data-aos="fade-up" data-aos-delay="200" aria-label="Elite plan">
+            <div class="plan-name">Elite</div>
+            <div class="plan-price">
+              <span class="plan-currency">$</span>
+              <span class="plan-amount">399</span>
+              <span class="plan-cycle">/mo</span>
+            </div>
+            <p class="plan-desc">Institutional-grade access for high-conviction traders.</p>
+            <ul class="plan-features" aria-label="Elite plan features">
+              <li><span class="pf-check" aria-hidden="true"></span>Everything in Professional</li>
+              <li><span class="pf-check" aria-hidden="true"></span>Full portfolio management</li>
+              <li><span class="pf-check" aria-hidden="true"></span>Weekly 1-on-1 sessions</li>
+              <li><span class="pf-check" aria-hidden="true"></span>Direct WhatsApp access</li>
+              <li><span class="pf-check" aria-hidden="true"></span>Custom strategy building</li>
+              <li><span class="pf-check" aria-hidden="true"></span>Tax optimisation advice</li>
+            </ul>
+            <a href="#contact" class="btn btn-outline btn-full">Apply Now</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════ TESTIMONIALS ════════════════════════════ -->
+    <section class="section testi-section" id="testimonials" aria-labelledby="testi-heading">
+      <div class="container">
+        <header class="section-header" data-aos="fade-up">
+          <p class="overline" id="testi-heading">Client Reviews</p>
+          <h2 class="section-title">Traders Who <span class="gradient-text">Trust Ali</span></h2>
+        </header>
+
+        <div class="testi-grid">
+
+          <article class="testi-card glass-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="testi-quote-icon" aria-hidden="true">"</div>
+            <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            <p class="testi-body">"Ali's signals changed everything. His entries are surgical — and his risk management framework alone is worth 10× the subscription. Best decision I've made as a trader."</p>
+            <footer class="testi-footer">
+              <div class="testi-avatar" style="--av-grad: linear-gradient(135deg,#f59e0b,#d97706)" aria-hidden="true">JK</div>
+              <div class="testi-meta">
+                <div class="testi-name">James K.</div>
+                <div class="testi-role">Full-time Trader · UAE</div>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testi-card glass-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="testi-quote-icon" aria-hidden="true">"</div>
+            <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            <p class="testi-body">"Three months in the mentorship programme and I went from losing trader to consistent profit. Ali's patience and depth of knowledge are genuinely unmatched."</p>
+            <footer class="testi-footer">
+              <div class="testi-avatar" style="--av-grad: linear-gradient(135deg,#6366f1,#8b5cf6)" aria-hidden="true">SR</div>
+              <div class="testi-meta">
+                <div class="testi-name">Sara R.</div>
+                <div class="testi-role">Crypto Investor · UK</div>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testi-card glass-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="testi-quote-icon" aria-hidden="true">"</div>
+            <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            <p class="testi-body">"I've tried many crypto analysts. Ali is the only one whose analysis consistently plays out. His weekly research reports are worth 10× the subscription cost alone."</p>
+            <footer class="testi-footer">
+              <div class="testi-avatar" style="--av-grad: linear-gradient(135deg,#06b6d4,#0891b2)" aria-hidden="true">MO</div>
+              <div class="testi-meta">
+                <div class="testi-name">Mohammed O.</div>
+                <div class="testi-role">Tech Entrepreneur · KSA</div>
+              </div>
+            </footer>
+          </article>
+
+          <article class="testi-card glass-card" data-aos="fade-up" data-aos-delay="240">
+            <div class="testi-quote-icon" aria-hidden="true">"</div>
+            <div class="testi-stars" aria-label="5 stars">★★★★★</div>
+            <p class="testi-body">"Portfolio management service is exceptional. Ali restructured my holdings and grew my crypto net worth 60% in one year. Clear strategy, full transparency."</p>
+            <footer class="testi-footer">
+              <div class="testi-avatar" style="--av-grad: linear-gradient(135deg,#10b981,#059669)" aria-hidden="true">LP</div>
+              <div class="testi-meta">
+                <div class="testi-name">Lena P.</div>
+                <div class="testi-role">Fund Analyst · Germany</div>
+              </div>
+            </footer>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════ CONTACT ════════════════════════════ -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-grid">
+
+        <div class="contact-info" data-aos="fade-right">
+          <p class="overline" id="contact-heading">Get In Touch</p>
+          <h2 class="section-title">Start Trading <br><span class="gradient-text">Smarter Today</span></h2>
+          <p class="body-text">Whether you're taking your first step into crypto or ready to scale serious capital, Ali is here to help. Expect a response within 24 hours.</p>
+
+          <nav class="contact-channels" aria-label="Contact channels">
+            <a href="mailto:ali@alicrypto.com" class="channel-item" aria-label="Email Ali">
+              <div class="channel-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <div class="ch-label">Email</div>
+                <div class="ch-value">ali@alicrypto.com</div>
+              </div>
+            </a>
+            <a href="https://t.me/AliCryptoTrader" class="channel-item" aria-label="Telegram">
+              <div class="channel-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.932z"/></svg>
+              </div>
+              <div>
+                <div class="ch-label">Telegram</div>
+                <div class="ch-value">@AliCryptoTrader</div>
+              </div>
+            </a>
+            <a href="https://twitter.com/AliCryptoX" class="channel-item" aria-label="Twitter / X">
+              <div class="channel-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </div>
+              <div>
+                <div class="ch-label">Twitter / X</div>
+                <div class="ch-value">@AliCryptoX</div>
+              </div>
+            </a>
+          </nav>
+        </div>
+
+        <div class="contact-form-box glass-card" data-aos="fade-left">
+          <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name <span class="req" aria-label="required">*</span></label>
+                <input type="text" id="fname" name="fname" placeholder="John" required autocomplete="given-name" />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name <span class="req" aria-label="required">*</span></label>
+                <input type="text" id="lname" name="lname" placeholder="Doe" required autocomplete="family-name" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address <span class="req" aria-label="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="service">Service Interest <span class="req" aria-label="required">*</span></label>
+              <select id="service" name="service" required aria-required="true">
+                <option value="" disabled selected>Select a service…</option>
+                <option value="signals">Trading Signals</option>
+                <option value="mentorship">1-on-1 Mentorship</option>
+                <option value="portfolio">Portfolio Management</option>
+                <option value="analysis">Market Analysis</option>
+                <option value="other">General Enquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message <span class="req" aria-label="required">*</span></label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell Ali about your experience and goals…" required aria-required="true"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span class="btn-label">Send Message</span>
+              <span class="btn-loader" hidden aria-hidden="true">
+                <svg class="spin" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" stroke-dasharray="60" stroke-dashoffset="20"/></svg>
+              </span>
+            </button>
+            <div class="form-success" id="formSuccess" hidden role="alert">
+              <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              Message sent! Ali will reply within 24 hours.
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo" aria-label="Back to top">
+          <div class="logo-mark">
+            <svg viewBox="0 0 28 28" fill="none"><polygon points="14,2 26,8 26,20 14,26 2,20 2,8" stroke="url(#lf1)" stroke-width="1.5" fill="rgba(99,102,241,0.08)"/><text x="14" y="18" text-anchor="middle" fill="url(#lf1)" font-size="11" font-weight="700" font-family="JetBrains Mono">A</text><defs><linearGradient id="lf1" x1="0" y1="0" x2="28" y2="28"><stop offset="0%" stop-color="#6366f1"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient></defs></svg>
+          </div>
+          <span class="logo-text">Ali<span class="logo-dot">.</span><span class="logo-suffix">trade</span></span>
+        </a>
+        <p>Professional crypto trading intelligence, delivered with integrity.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#performance">Results</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer-legal">© 2026 AliCrypto. All rights reserved. <span>·</span> Cryptocurrency trading carries significant financial risk. This site is for informational purposes only and does not constitute financial advice.</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backTop" aria-label="Back to top" title="Back to top">
+    <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clip-rule="evenodd"/></svg>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+</html>
