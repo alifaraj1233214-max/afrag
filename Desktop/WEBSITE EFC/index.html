@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EFC – Pioneering pharmaceutical excellence and advanced treatments for a healthier world." />
+  <title>EFC | Pharmaceutical Excellence & Advanced Treatments</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/animations.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="19" stroke="#C9A227" stroke-width="2"/>
+            <path d="M20 8 L20 32 M8 20 L32 20" stroke="#C9A227" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="20" cy="20" r="5" fill="#C9A227"/>
+          </svg>
+        </div>
+        <span class="logo-text">EFC</span>
+        <span class="logo-sub">PHARMACEUTICALS</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Treatments</a></li>
+        <li><a href="#products" class="nav-link">Products</a></li>
+        <li><a href="#research" class="nav-link">Research</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-nav">Get Consultation</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <button class="mobile-close" id="mobileClose"><i class="fas fa-times"></i></button>
+    <ul class="mobile-links">
+      <li><a href="#home" class="mobile-link">Home</a></li>
+      <li><a href="#about" class="mobile-link">About EFC</a></li>
+      <li><a href="#services" class="mobile-link">Treatments</a></li>
+      <li><a href="#products" class="mobile-link">Products</a></li>
+      <li><a href="#research" class="mobile-link">Research</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-primary mobile-cta">Get Consultation</a>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge animate-fade-up">
+        <i class="fas fa-award"></i>
+        Trusted by 500+ Healthcare Institutions Worldwide
+      </div>
+      <h1 class="hero-title animate-fade-up delay-1">
+        Pioneering <span class="text-gradient">Pharmaceutical</span><br/>
+        Excellence Since 1998
+      </h1>
+      <p class="hero-desc animate-fade-up delay-2">
+        EFC leads the forefront of pharmaceutical innovation — delivering life-changing
+        treatments and therapies built on decades of scientific expertise, rigorous research,
+        and an unwavering commitment to patient health.
+      </p>
+      <div class="hero-actions animate-fade-up delay-3">
+        <a href="#services" class="btn btn-primary btn-lg">
+          <i class="fas fa-flask"></i> Explore Treatments
+        </a>
+        <a href="#research" class="btn btn-outline btn-lg">
+          <i class="fas fa-microscope"></i> Our Research
+        </a>
+      </div>
+
+      <!-- Hero molecule graphic -->
+      <div class="hero-molecule animate-float">
+        <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="150" cy="150" r="30" fill="rgba(201,162,39,0.15)" stroke="#C9A227" stroke-width="2"/>
+          <circle cx="75"  cy="90"  r="20" fill="rgba(26,107,217,0.15)" stroke="#1A6BD9" stroke-width="2"/>
+          <circle cx="225" cy="90"  r="20" fill="rgba(26,107,217,0.15)" stroke="#1A6BD9" stroke-width="2"/>
+          <circle cx="60"  cy="200" r="15" fill="rgba(201,162,39,0.1)"  stroke="#C9A227" stroke-width="1.5"/>
+          <circle cx="240" cy="200" r="15" fill="rgba(201,162,39,0.1)"  stroke="#C9A227" stroke-width="1.5"/>
+          <circle cx="150" cy="250" r="18" fill="rgba(26,107,217,0.1)"  stroke="#1A6BD9" stroke-width="1.5"/>
+          <line x1="150" y1="150" x2="75"  y2="90"  stroke="#C9A227" stroke-width="1.5" opacity="0.6"/>
+          <line x1="150" y1="150" x2="225" y2="90"  stroke="#C9A227" stroke-width="1.5" opacity="0.6"/>
+          <line x1="150" y1="150" x2="60"  y2="200" stroke="#1A6BD9" stroke-width="1.5" opacity="0.6"/>
+          <line x1="150" y1="150" x2="240" y2="200" stroke="#1A6BD9" stroke-width="1.5" opacity="0.6"/>
+          <line x1="150" y1="150" x2="150" y2="250" stroke="#C9A227" stroke-width="1.5" opacity="0.6"/>
+          <circle cx="150" cy="150" r="8" fill="#C9A227"/>
+          <circle cx="75"  cy="90"  r="5" fill="#1A6BD9"/>
+          <circle cx="225" cy="90"  r="5" fill="#1A6BD9"/>
+          <circle cx="60"  cy="200" r="4" fill="#C9A227"/>
+          <circle cx="240" cy="200" r="4" fill="#C9A227"/>
+          <circle cx="150" cy="250" r="5" fill="#1A6BD9"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll to explore</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       STATS BAR
+  ═══════════════════════════════════════ -->
+  <section class="stats-bar" id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-target="26">0</div>
+          <div class="stat-label">Years of Excellence</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="180">0</div>
+          <div class="stat-label">Countries Served</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="2400">0</div>
+          <div class="stat-label">Pharmaceutical Products</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="50">0</div>
+          <div class="stat-label">Million Patients Helped</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="320">0</div>
+          <div class="stat-label">Research Scientists</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-img-main">
+            <div class="img-placeholder img-lab">
+              <i class="fas fa-flask-vial"></i>
+              <span>Research Laboratory</span>
+            </div>
+          </div>
+          <div class="about-img-secondary">
+            <div class="img-placeholder img-team">
+              <i class="fas fa-users"></i>
+              <span>Expert Team</span>
+            </div>
+            <div class="img-placeholder img-cert">
+              <i class="fas fa-certificate"></i>
+              <span>ISO 9001:2015 Certified</span>
+            </div>
+          </div>
+          <div class="about-badge-float">
+            <i class="fas fa-shield-halved"></i>
+            <div>
+              <strong>WHO GMP</strong>
+              <span>Certified Facility</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="section-tag">About EFC</div>
+          <h2 class="section-title">A Legacy of <span class="text-gradient">Scientific Innovation</span> & Patient Care</h2>
+          <p class="section-desc">
+            Founded in 1998, EFC (Excellence in Pharmaceutical Care) has grown from a pioneering research lab
+            into one of the world's most trusted pharmaceutical companies. Our mission is simple: develop
+            breakthrough treatments that transform lives, backed by rigorous science and compassionate care.
+          </p>
+          <p class="section-desc">
+            With state-of-the-art manufacturing facilities operating under the highest international standards,
+            we deliver pharmaceutical solutions across oncology, cardiology, neurology, infectious diseases,
+            and rare conditions — serving healthcare providers and patients in over 180 countries.
+          </p>
+
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-icon"><i class="fas fa-atom"></i></div>
+              <div>
+                <strong>Innovation First</strong>
+                <span>Cutting-edge R&D with 15% annual revenue reinvested</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon"><i class="fas fa-heart-pulse"></i></div>
+              <div>
+                <strong>Patient-Centered</strong>
+                <span>Every decision guided by patient outcomes and safety</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon"><i class="fas fa-globe"></i></div>
+              <div>
+                <strong>Global Impact</strong>
+                <span>Accessible medicines across emerging and developed markets</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary">Learn More About EFC <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       SERVICES / TREATMENTS
+  ═══════════════════════════════════════ -->
+  <section class="services" id="services">
+    <div class="services-bg"></div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Therapeutic Areas</div>
+        <h2 class="section-title">Advanced <span class="text-gradient">Treatments</span> Across Specialties</h2>
+        <p class="section-desc">From rare diseases to widespread conditions, EFC offers comprehensive pharmaceutical solutions developed through decades of clinical expertise.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card" data-delay="0">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-ribbon"></i></div>
+          </div>
+          <h3>Oncology</h3>
+          <p>Precision cancer therapies including targeted treatments, immunotherapy agents, and supportive oncology care for hematologic and solid tumor malignancies.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle"></i> Targeted Therapy</li>
+            <li><i class="fas fa-check-circle"></i> Immunotherapy</li>
+            <li><i class="fas fa-check-circle"></i> Supportive Care</li>
+          </ul>
+          <a href="#contact" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card" data-delay="100">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-heart-pulse"></i></div>
+          </div>
+          <h3>Cardiology</h3>
+          <p>Comprehensive cardiovascular treatments including anti-hypertensives, anti-thrombotics, and heart failure medications backed by landmark clinical trials.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle"></i> Anti-Hypertensives</li>
+            <li><i class="fas fa-check-circle"></i> Anti-Thrombotics</li>
+            <li><i class="fas fa-check-circle"></i> Heart Failure Therapies</li>
+          </ul>
+          <a href="#contact" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card" data-delay="200">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-brain"></i></div>
+          </div>
+          <h3>Neurology</h3>
+          <p>Innovative neurological treatments addressing epilepsy, multiple sclerosis, Parkinson's disease, Alzheimer's, and acute neurological conditions.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle"></i> Epilepsy Management</li>
+            <li><i class="fas fa-check-circle"></i> MS Therapies</li>
+            <li><i class="fas fa-check-circle"></i> Neurodegenerative Care</li>
+          </ul>
+          <a href="#contact" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card" data-delay="0">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-virus-slash"></i></div>
+          </div>
+          <h3>Infectious Diseases</h3>
+          <p>Broad-spectrum and targeted anti-infective agents including antibiotics, antivirals, antifungals, and antimalarials for both community and hospital settings.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle"></i> Antibiotic Therapy</li>
+            <li><i class="fas fa-check-circle"></i> Antiviral Agents</li>
+            <li><i class="fas fa-check-circle"></i> Tropical Disease Care</li>
+          </ul>
+          <a href="#contact" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card" data-delay="100">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-dna"></i></div>
+          </div>
+          <h3>Rare Diseases</h3>
+          <p>Orphan drug development and specialized therapies for rare genetic and metabolic conditions, providing hope for underserved patient populations worldwide.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle"></i> Enzyme Replacement</li>
+            <li><i class="fas fa-check-circle"></i> Gene Therapy Support</li>
+            <li><i class="fas fa-check-circle"></i> Metabolic Disorders</li>
+          </ul>
+          <a href="#contact" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="service-card" data-delay="200">
+          <div class="service-icon-wrap">
+            <div class="service-icon"><i class="fas fa-syringe"></i></div>
+          </div>
+          <h3>Biologics & Vaccines</h3>
+          <p>Advanced biologic therapies and vaccine platforms leveraging monoclonal antibodies, recombinant proteins, and novel adjuvant technologies for immune modulation.</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle"></i> Monoclonal Antibodies</li>
+            <li><i class="fas fa-check-circle"></i> Prophylactic Vaccines</li>
+            <li><i class="fas fa-check-circle"></i> Biosimilars</li>
+          </ul>
+          <a href="#contact" class="service-link">Learn more <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PRODUCTS SECTION
+  ═══════════════════════════════════════ -->
+  <section class="products" id="products">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Featured Products</div>
+        <h2 class="section-title">Our <span class="text-gradient">Pharmaceutical Portfolio</span></h2>
+        <p class="section-desc">A selection of EFC's flagship pharmaceutical products trusted by healthcare professionals globally.</p>
+      </div>
+
+      <div class="products-filter">
+        <button class="filter-btn active" data-filter="all">All Products</button>
+        <button class="filter-btn" data-filter="oncology">Oncology</button>
+        <button class="filter-btn" data-filter="cardiology">Cardiology</button>
+        <button class="filter-btn" data-filter="neurology">Neurology</button>
+        <button class="filter-btn" data-filter="biologics">Biologics</button>
+      </div>
+
+      <div class="products-grid">
+        <div class="product-card" data-cat="oncology">
+          <div class="product-tag">Oncology</div>
+          <div class="product-icon"><i class="fas fa-pills"></i></div>
+          <h3>EFC-Oncablast™</h3>
+          <p class="product-generic">Cabozantinib 40mg / 60mg</p>
+          <p class="product-desc">Multi-targeted kinase inhibitor for advanced renal cell carcinoma and hepatocellular carcinoma.</p>
+          <div class="product-meta">
+            <span><i class="fas fa-capsules"></i> Oral tablet</span>
+            <span><i class="fas fa-file-medical"></i> FDA Approved</span>
+          </div>
+          <a href="#contact" class="btn btn-outline btn-sm">Request Information</a>
+        </div>
+
+        <div class="product-card" data-cat="cardiology">
+          <div class="product-tag tag-cardio">Cardiology</div>
+          <div class="product-icon"><i class="fas fa-pills"></i></div>
+          <h3>EFC-Cardivex™</h3>
+          <p class="product-generic">Sacubitril/Valsartan 50mg / 100mg / 200mg</p>
+          <p class="product-desc">First-in-class angiotensin receptor-neprilysin inhibitor for heart failure with reduced ejection fraction.</p>
+          <div class="product-meta">
+            <span><i class="fas fa-capsules"></i> Film-coated tablet</span>
+            <span><i class="fas fa-file-medical"></i> EMA Approved</span>
+          </div>
+          <a href="#contact" class="btn btn-outline btn-sm">Request Information</a>
+        </div>
+
+        <div class="product-card" data-cat="neurology">
+          <div class="product-tag tag-neuro">Neurology</div>
+          <div class="product-icon"><i class="fas fa-pills"></i></div>
+          <h3>EFC-Neurozym™</h3>
+          <p class="product-generic">Natalizumab 300mg/15mL</p>
+          <p class="product-desc">Anti-α4-integrin monoclonal antibody for relapsing forms of multiple sclerosis with high efficacy.</p>
+          <div class="product-meta">
+            <span><i class="fas fa-capsules"></i> IV Infusion</span>
+            <span><i class="fas fa-file-medical"></i> FDA/EMA Approved</span>
+          </div>
+          <a href="#contact" class="btn btn-outline btn-sm">Request Information</a>
+        </div>
+
+        <div class="product-card" data-cat="biologics">
+          <div class="product-tag tag-bio">Biologics</div>
+          <div class="product-icon"><i class="fas fa-vial"></i></div>
+          <h3>EFC-Immunogen™</h3>
+          <p class="product-generic">Adalimumab 40mg/0.4mL</p>
+          <p class="product-desc">Recombinant human anti-TNF monoclonal antibody for rheumatoid arthritis, Crohn's, and psoriasis.</p>
+          <div class="product-meta">
+            <span><i class="fas fa-capsules"></i> SC Injection</span>
+            <span><i class="fas fa-file-medical"></i> WHO Prequalified</span>
+          </div>
+          <a href="#contact" class="btn btn-outline btn-sm">Request Information</a>
+        </div>
+
+        <div class="product-card" data-cat="oncology">
+          <div class="product-tag">Oncology</div>
+          <div class="product-icon"><i class="fas fa-vial"></i></div>
+          <h3>EFC-Immunex™</h3>
+          <p class="product-generic">Pembrolizumab 100mg/4mL</p>
+          <p class="product-desc">Anti-PD-1 checkpoint inhibitor for multiple cancer indications including NSCLC and melanoma.</p>
+          <div class="product-meta">
+            <span><i class="fas fa-capsules"></i> IV Infusion</span>
+            <span><i class="fas fa-file-medical"></i> FDA Approved</span>
+          </div>
+          <a href="#contact" class="btn btn-outline btn-sm">Request Information</a>
+        </div>
+
+        <div class="product-card" data-cat="cardiology">
+          <div class="product-tag tag-cardio">Cardiology</div>
+          <div class="product-icon"><i class="fas fa-pills"></i></div>
+          <h3>EFC-Gluco-X™</h3>
+          <p class="product-generic">Empagliflozin 10mg / 25mg</p>
+          <p class="product-desc">SGLT2 inhibitor for type 2 diabetes management with proven cardiovascular and renal protection.</p>
+          <div class="product-meta">
+            <span><i class="fas fa-capsules"></i> Oral tablet</span>
+            <span><i class="fas fa-file-medical"></i> EMA Approved</span>
+          </div>
+          <a href="#contact" class="btn btn-outline btn-sm">Request Information</a>
+        </div>
+      </div>
+
+      <div class="products-cta">
+        <p>Looking for a specific product or formulation?</p>
+        <a href="#contact" class="btn btn-primary">Browse Full Catalogue <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       RESEARCH & INNOVATION
+  ═══════════════════════════════════════ -->
+  <section class="research" id="research">
+    <div class="research-bg-grid"></div>
+    <div class="container">
+      <div class="section-header light">
+        <div class="section-tag tag-light">Research & Innovation</div>
+        <h2 class="section-title light">Building Tomorrow's <span class="text-gradient-light">Medicines Today</span></h2>
+        <p class="section-desc light">Our pipeline spans early discovery to Phase III clinical trials across multiple therapeutic areas.</p>
+      </div>
+
+      <div class="research-layout">
+        <div class="pipeline">
+          <h3 class="pipeline-title">Development Pipeline</h3>
+          <div class="pipeline-stages">
+            <div class="pipeline-stage">
+              <div class="stage-label">Discovery</div>
+              <div class="stage-bar">
+                <div class="stage-fill" style="width:100%"></div>
+              </div>
+              <div class="stage-count">48 compounds</div>
+            </div>
+            <div class="pipeline-stage">
+              <div class="stage-label">Pre-Clinical</div>
+              <div class="stage-bar">
+                <div class="stage-fill" style="width:75%"></div>
+              </div>
+              <div class="stage-count">24 compounds</div>
+            </div>
+            <div class="pipeline-stage">
+              <div class="stage-label">Phase I</div>
+              <div class="stage-bar">
+                <div class="stage-fill" style="width:55%"></div>
+              </div>
+              <div class="stage-count">14 candidates</div>
+            </div>
+            <div class="pipeline-stage">
+              <div class="stage-label">Phase II</div>
+              <div class="stage-bar">
+                <div class="stage-fill" style="width:38%"></div>
+              </div>
+              <div class="stage-count">9 candidates</div>
+            </div>
+            <div class="pipeline-stage">
+              <div class="stage-label">Phase III</div>
+              <div class="stage-bar">
+                <div class="stage-fill stage-fill-gold" style="width:22%"></div>
+              </div>
+              <div class="stage-count">4 candidates</div>
+            </div>
+            <div class="pipeline-stage">
+              <div class="stage-label">Regulatory Review</div>
+              <div class="stage-bar">
+                <div class="stage-fill stage-fill-gold" style="width:12%"></div>
+              </div>
+              <div class="stage-count">2 candidates</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="research-highlights">
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-microscope"></i></div>
+            <div class="highlight-content">
+              <h4>AI-Driven Drug Discovery</h4>
+              <p>Leveraging machine learning and molecular simulation to identify novel therapeutic targets 10x faster than traditional methods.</p>
+              <div class="highlight-tag">Technology Focus</div>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-dna"></i></div>
+            <div class="highlight-content">
+              <h4>Precision Oncology Platform</h4>
+              <p>Biomarker-driven patient stratification for individualized cancer therapies, targeting tumors at the molecular level.</p>
+              <div class="highlight-tag">Phase III</div>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-shield-virus"></i></div>
+            <div class="highlight-content">
+              <h4>Next-Gen mRNA Therapeutics</h4>
+              <p>Proprietary mRNA delivery platform for infectious diseases and rare metabolic disorders with enhanced stability profiles.</p>
+              <div class="highlight-tag">Phase II</div>
+            </div>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon"><i class="fas fa-brain"></i></div>
+            <div class="highlight-content">
+              <h4>Neurodegeneration Research</h4>
+              <p>Novel tau-targeting antibodies and neuroprotective agents for early-stage Alzheimer's disease prevention and treatment.</p>
+              <div class="highlight-tag">Phase I</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="research-certifications">
+        <div class="cert-title">International Certifications & Partnerships</div>
+        <div class="cert-grid">
+          <div class="cert-item"><i class="fas fa-certificate"></i><span>WHO GMP</span></div>
+          <div class="cert-item"><i class="fas fa-certificate"></i><span>FDA cGMP</span></div>
+          <div class="cert-item"><i class="fas fa-certificate"></i><span>EMA GMP</span></div>
+          <div class="cert-item"><i class="fas fa-certificate"></i><span>ISO 9001:2015</span></div>
+          <div class="cert-item"><i class="fas fa-certificate"></i><span>ICH Q10</span></div>
+          <div class="cert-item"><i class="fas fa-certificate"></i><span>ISO 14001</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       CONTACT SECTION
+  ═══════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">Contact EFC</div>
+        <h2 class="section-title">Connect With Our <span class="text-gradient">Expert Team</span></h2>
+        <p class="section-desc">Whether you're a healthcare professional, researcher, or institution — our team is ready to assist you.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-building"></i></div>
+            <div>
+              <h4>Global Headquarters</h4>
+              <p>EFC Tower, BioMedical District<br/>Geneva, Switzerland 1201</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <h4>Medical Information</h4>
+              <p>+41 22 900 0000<br/>Mon–Fri, 8AM–6PM CET</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email Us</h4>
+              <p>medical@efc-pharma.com<br/>partnerships@efc-pharma.com</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-globe"></i></div>
+            <div>
+              <h4>Regional Offices</h4>
+              <p>New York · London · Dubai<br/>Singapore · São Paulo · Cairo</p>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="Research Gate"><i class="fas fa-flask"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Dr. Sarah" required />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Johnson" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="s.johnson@hospital.com" required />
+            </div>
+            <div class="form-group">
+              <label for="organization">Organization</label>
+              <input type="text" id="organization" name="organization" placeholder="Hospital / Institution / Company" />
+            </div>
+            <div class="form-group">
+              <label for="inquiry">Inquiry Type *</label>
+              <select id="inquiry" name="inquiry" required>
+                <option value="" disabled selected>Select inquiry type</option>
+                <option value="medical">Medical Information</option>
+                <option value="product">Product Inquiry</option>
+                <option value="research">Research Partnership</option>
+                <option value="distribution">Distribution / Procurement</option>
+                <option value="clinical">Clinical Trial Inquiry</option>
+                <option value="media">Media / Press</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Please describe your inquiry in detail..." required></textarea>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="consent" name="consent" required />
+              <label for="consent">I agree to EFC's Privacy Policy and consent to being contacted regarding my inquiry.</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="fas fa-check-circle"></i>
+              <strong>Message sent successfully!</strong><br/>
+              Our team will respond within 1–2 business days.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#home" class="nav-logo">
+              <div class="logo-icon">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="20" cy="20" r="19" stroke="#C9A227" stroke-width="2"/>
+                  <path d="M20 8 L20 32 M8 20 L32 20" stroke="#C9A227" stroke-width="3" stroke-linecap="round"/>
+                  <circle cx="20" cy="20" r="5" fill="#C9A227"/>
+                </svg>
+              </div>
+              <span class="logo-text">EFC</span>
+              <span class="logo-sub">PHARMACEUTICALS</span>
+            </a>
+            <p class="footer-tagline">Advancing human health through pharmaceutical innovation, scientific excellence, and unwavering commitment to patients worldwide.</p>
+            <div class="footer-certifications">
+              <span class="fcert"><i class="fas fa-award"></i> WHO GMP</span>
+              <span class="fcert"><i class="fas fa-award"></i> FDA Approved</span>
+              <span class="fcert"><i class="fas fa-award"></i> ISO 9001</span>
+            </div>
+          </div>
+
+          <div class="footer-links-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#about">About EFC</a></li>
+              <li><a href="#research">Leadership Team</a></li>
+              <li><a href="#research">Careers</a></li>
+              <li><a href="#research">Investor Relations</a></li>
+              <li><a href="#contact">Press & Media</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-col">
+            <h4>Therapies</h4>
+            <ul>
+              <li><a href="#services">Oncology</a></li>
+              <li><a href="#services">Cardiology</a></li>
+              <li><a href="#services">Neurology</a></li>
+              <li><a href="#services">Infectious Diseases</a></li>
+              <li><a href="#services">Rare Diseases</a></li>
+              <li><a href="#services">Biologics & Vaccines</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-col">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#research">Clinical Trials</a></li>
+              <li><a href="#products">Product Catalogue</a></li>
+              <li><a href="#research">Scientific Publications</a></li>
+              <li><a href="#contact">Medical Information</a></li>
+              <li><a href="#contact">Pharmacovigilance</a></li>
+              <li><a href="#contact">Patient Support</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; 2026 EFC Pharmaceuticals. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Pharmacovigilance</a>
+          </div>
+        </div>
+        <p class="footer-disclaimer">
+          <i class="fas fa-info-circle"></i>
+          This website is intended for healthcare professionals and informational purposes only.
+          Product information may vary by country. Always consult prescribing information and local regulations.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
