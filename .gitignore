@@ -1,0 +1,23 @@
+# Next.js
+efc-app/.next/
+efc-app/out/
+
+# Dependencies
+efc-app/node_modules/
+
+# Loki session state
+.loki/
+
+# Environment
+efc-app/.env
+efc-app/.env.local
+efc-app/.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.suo
+*.user
