@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- viewport-meta (UX: layout-responsive) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- color-scheme for OLED dark mode -->
+  <meta name="color-scheme" content="dark" />
+  <title>Safari | Baghdad — The Cradle of Civilisation</title>
+  <meta name="description" content="Discover Baghdad with Safari — the world's most prestigious luxury travel company. Explore ancient Mesopotamian history, iconic landmarks, and curated private tours." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<!-- Skip to main content (accessibility: keyboard-nav, skip-links) -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     NAV — floating, fixed, scrolled state via JS
+════════════════════════════════════════════════════════════ -->
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <a href="#" class="nav-logo" aria-label="Safari – return to top">
+    <div class="nav-logo-dots" aria-hidden="true">
+      <span style="background:#E8B86D"></span>
+      <span style="background:#C4622D"></span>
+      <span style="background:#E8B86D"></span>
+    </div>
+    <span class="nav-logo-text">SAFARI</span>
+  </a>
+
+  <ul class="nav-links" role="list">
+    <li><a href="#discover" data-section="discover">Discover</a></li>
+    <li><a href="#sites"    data-section="sites">Sites</a></li>
+    <li><a href="#tours"    data-section="tours">Tours</a></li>
+    <li><a href="#culture"  data-section="culture">Culture</a></li>
+    <li><a href="#contact"  data-section="contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Book Now</a>
+
+  <!-- Hamburger — aria-label (accessibility: aria-labels) -->
+  <button class="nav-hamburger" id="nav-hamburger"
+    aria-label="Open navigation menu"
+    aria-expanded="false"
+    aria-controls="nav-mobile">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </button>
+</nav>
+
+<!-- Mobile nav -->
+<div class="nav-mobile" id="nav-mobile" role="menu" aria-label="Mobile navigation">
+  <a href="#discover" role="menuitem">Discover</a>
+  <a href="#sites"    role="menuitem">Sites</a>
+  <a href="#tours"    role="menuitem">Tours</a>
+  <a href="#culture"  role="menuitem">Culture</a>
+  <a href="#contact"  role="menuitem">Contact</a>
+  <a href="#contact"  role="menuitem">Book Now →</a>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     MAIN (landmark for skip link)
+════════════════════════════════════════════════════════════ -->
+<main id="main-content">
+
+<!-- ════════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════ -->
+<section id="hero" aria-label="Hero — Baghdad, City of Peace">
+
+  <!-- Sky layer -->
+  <div class="hero-layer hero-sky" id="hero-sky" aria-hidden="true">
+    <div id="hero-stars"></div>
+    <div class="hero-horizon"></div>
+  </div>
+
+  <!-- Baghdad skyline silhouette -->
+  <div class="hero-silhouette" id="hero-mid" aria-hidden="true">
+    <svg viewBox="0 0 1440 260" preserveAspectRatio="none"
+      style="width:100%;height:260px;display:block;"
+      role="img" aria-label="Baghdad city silhouette">
+      <path d="
+        M0,260 L0,170 L60,170 L60,90 L65,90 L65,65 L67,45 L70,45 L70,65 L72,65 L72,90 L82,90 L82,170
+        L120,170 L145,145 Q165,120 185,145 L205,170 L250,170 L250,110 L255,110 L255,78 L258,55 L261,35 L264,55 L267,78 L267,110 L272,110 L272,170
+        L320,170 L360,170 L382,142 Q412,108 442,142 L462,170 L505,170
+        L520,170 L520,98 L524,98 L524,62 L527,42 L530,22 L533,42 L536,62 L536,98 L540,98 L540,170
+        L590,170 L630,170 L670,125 Q710,82 750,125 L790,170
+        L840,170 L862,145 Q885,108 920,128 L942,170
+        L980,170 L1000,88 L1004,88 L1004,60 L1007,40 L1010,20 L1013,40 L1016,60 L1016,88 L1020,88 L1020,170
+        L1065,170 L1105,170 L1145,145 Q1175,108 1205,145 L1225,170
+        L1268,170 L1288,108 L1292,108 L1292,75 L1295,55 L1298,35 L1301,55 L1304,75 L1304,108 L1310,108 L1310,170
+        L1360,170 L1440,170 L1440,260 Z"
+        fill="rgba(18,28,56,0.85)" />
+      <path d="
+        M0,260 L0,188 L85,188 L108,165 L148,188 L210,188
+        L232,158 L252,158 L252,260
+        L295,260 L295,178 L338,178 L338,260
+        L420,260 L420,182 L442,160 L464,182 L484,260
+        L548,260 L548,190 L612,190 L612,260
+        L660,260 L660,178 L682,155 L704,178 L724,260
+        L786,260 L786,188 L848,188 L872,165 L895,188 L938,260
+        L998,260 L998,182 L1042,182 L1042,260
+        L1102,260 L1102,192 L1124,168 L1148,192 L1190,260
+        L1252,260 L1252,188 L1315,188 L1315,260
+        L1378,260 L1378,182 L1440,182 L1440,260 Z"
+        fill="rgba(11,18,36,0.96)" />
+    </svg>
+  </div>
+
+  <!-- Ground fade -->
+  <div class="hero-ground" id="hero-near" aria-hidden="true">
+    <div class="hero-ground-bar"></div>
+  </div>
+
+  <!-- Arabic geometric overlay -->
+  <div class="hero-geo" aria-hidden="true">
+    <svg width="100%" height="100%" role="presentation">
+      <defs>
+        <pattern id="hGeo" x="0" y="0" width="80" height="80" patternUnits="userSpaceOnUse">
+          <polygon points="40,1 79,21 79,59 40,79 1,59 1,21"
+            fill="none" stroke="#E8B86D" stroke-width="0.6"/>
+          <polygon points="40,16 64,28.5 64,51.5 40,64 16,51.5 16,28.5"
+            fill="none" stroke="#E8B86D" stroke-width="0.4"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#hGeo)"/>
+    </svg>
+  </div>
+
+  <!-- Hero content -->
+  <div class="hero-content">
+    <p class="hero-arabic" lang="ar" aria-label="Baghdad — Cradle of Civilisation in Arabic">بغداد · مهد الحضارة</p>
+    <h1 class="hero-title">BAGHDAD</h1>
+    <div class="hero-rule" aria-hidden="true">
+      <div class="hero-rule-line"></div>
+      <span class="hero-rule-label">The City of Peace · Safari Exclusive</span>
+      <div class="hero-rule-line"></div>
+    </div>
+    <p class="hero-sub">Where ancient Mesopotamia meets a living, breathing culture — curated exclusively for the discerning traveller.</p>
+    <div class="hero-btns">
+      <a href="#discover" class="btn-primary">Explore Baghdad</a>
+      <a href="#tours"    class="btn-outline">View Tours</a>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="hero-scroll" aria-hidden="true">
+    <span class="hero-scroll-label">Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     GEO DIVIDER (reusable pattern strip)
+════════════════════════════════════════════════════════════ -->
+<div class="geo-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;" role="presentation">
+    <defs>
+      <pattern id="dp1" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+        <polygon points="30,2 58,16 58,44 30,58 2,44 2,16" fill="none" stroke="#E8B86D" stroke-width="0.5" opacity="0.25"/>
+        <circle cx="30" cy="30" r="2.5" fill="#C4622D" opacity="0.4"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#dp1)"/>
+    <line x1="0" y1="30" x2="1440" y2="30" stroke="#E8B86D" stroke-width="0.5" opacity="0.15"/>
+  </svg>
+  <div class="geo-divider-diamond">
+    <div class="geo-divider-dot"></div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     DISCOVER
+════════════════════════════════════════════════════════════ -->
+<section id="discover" aria-labelledby="discover-heading">
+  <div class="discover-inner">
+    <div class="section-label reveal" aria-hidden="true">
+      <div class="section-label-line"></div>
+      <span class="section-label-text">01 — Discover</span>
+    </div>
+    <div class="discover-grid">
+      <div>
+        <!-- heading hierarchy: h2 under h1 in hero ✓ -->
+        <h2 id="discover-heading" class="discover-heading reveal">
+          Five thousand years<br>
+          <em>of wonder</em>
+        </h2>
+        <p class="discover-body reveal reveal-delay-1">
+          Baghdad — Madinat al-Salam, "City of Peace" — was founded in 762&nbsp;CE by the Abbasid Caliph al-Mansur on the banks of the Tigris River. Within a century it had become the largest city on earth, a beacon of art, science, and culture during the Islamic Golden Age.
+        </p>
+        <p class="discover-body reveal reveal-delay-2">
+          Today, Safari curates the only private luxury programme that opens the doors of ancient palaces, living souqs, and sacred shrines for the world's most discerning travellers.
+        </p>
+        <a href="#sites" class="link-arrow reveal reveal-delay-3" aria-label="Explore all historical sites">
+          Explore Historical Sites &nbsp;→
+        </a>
+      </div>
+      <!-- Stats -->
+      <div class="stats-grid" aria-label="Key facts about Baghdad">
+        <div class="stat-card reveal reveal-delay-1">
+          <div><span class="stat-num" data-count="762" aria-label="762">0</span><span class="stat-unit" aria-hidden="true">CE</span></div>
+          <p class="stat-label">Founded by Caliph al-Mansur</p>
+        </div>
+        <div class="stat-card reveal reveal-delay-2">
+          <div><span class="stat-num" data-count="8" aria-label="8">0</span><span class="stat-unit" aria-hidden="true">+</span></div>
+          <p class="stat-label">UNESCO-listed heritage sites</p>
+        </div>
+        <div class="stat-card reveal reveal-delay-3">
+          <div><span class="stat-num" data-count="5000" aria-label="5,000">0</span><span class="stat-unit" aria-hidden="true">yr</span></div>
+          <p class="stat-label">Continuous human settlement</p>
+        </div>
+        <div class="stat-card reveal reveal-delay-4">
+          <div><span class="stat-num" data-count="12" aria-label="12">0</span><span class="stat-unit" aria-hidden="true">pkg</span></div>
+          <p class="stat-label">Exclusive private tours</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- GEO DIVIDER -->
+<div class="geo-divider" aria-hidden="true">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;" role="presentation">
+    <rect width="100%" height="100%" fill="url(#dp1)"/>
+    <line x1="0" y1="30" x2="1440" y2="30" stroke="#E8B86D" stroke-width="0.5" opacity="0.15"/>
+  </svg>
+  <div class="geo-divider-diamond"><div class="geo-divider-dot"></div></div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     TIMELINE
+════════════════════════════════════════════════════════════ -->
+<section id="timeline" aria-labelledby="timeline-heading">
+  <div class="timeline-inner">
+    <div class="section-label reveal" aria-hidden="true">
+      <div class="section-label-line"></div>
+      <span class="section-label-text">02 — A Brief History</span>
+    </div>
+    <h2 id="timeline-heading" class="timeline-heading reveal">Five millennia in six chapters</h2>
+
+    <ol class="timeline-list" aria-label="Key events in Baghdad's history">
+      <div class="timeline-line" aria-hidden="true"></div>
+
+      <li class="timeline-item reveal">
+        <div class="timeline-year" aria-hidden="true">3500 BCE</div>
+        <div class="timeline-dot-wrap" aria-hidden="true"><div class="timeline-dot"></div></div>
+        <div>
+          <h3 class="timeline-content-title"><time datetime="-3500">3500 BCE</time> — Mesopotamian Civilisation</h3>
+          <p class="timeline-content-desc">The Sumer and Akkad civilisations flourish between the Tigris and Euphrates rivers, inventing writing, law, and the wheel — the very foundations of human culture.</p>
+        </div>
+      </li>
+
+      <li class="timeline-item reveal reveal-delay-1">
+        <div class="timeline-year" aria-hidden="true">539 BCE</div>
+        <div class="timeline-dot-wrap" aria-hidden="true"><div class="timeline-dot"></div></div>
+        <div>
+          <h3 class="timeline-content-title"><time datetime="-0539">539 BCE</time> — Persian Conquest</h3>
+          <p class="timeline-content-desc">Cyrus the Great conquers Babylon, integrating Iraq into the Achaemenid Empire and preserving its extraordinary cultural heritage for posterity.</p>
+        </div>
+      </li>
+
+      <li class="timeline-item reveal reveal-delay-2">
+        <div class="timeline-year" aria-hidden="true">762 CE</div>
+        <div class="timeline-dot-wrap" aria-hidden="true"><div class="timeline-dot"></div></div>
+        <div>
+          <h3 class="timeline-content-title"><time datetime="0762">762 CE</time> — Baghdad Founded</h3>
+          <p class="timeline-content-desc">Caliph al-Mansur establishes Madinat al-Salam ("City of Peace") on the west bank of the Tigris as the glittering capital of the Abbasid Caliphate.</p>
+        </div>
+      </li>
+
+      <li class="timeline-item reveal reveal-delay-3">
+        <div class="timeline-year" aria-hidden="true">830 CE</div>
+        <div class="timeline-dot-wrap" aria-hidden="true"><div class="timeline-dot"></div></div>
+        <div>
+          <h3 class="timeline-content-title"><time datetime="0830">830 CE</time> — House of Wisdom</h3>
+          <p class="timeline-content-desc">Bayt al-Hikmah becomes the world's greatest centre of learning — translating Greek, Persian, and Indian texts into Arabic, preserving classical knowledge that would later spark the European Renaissance.</p>
+        </div>
+      </li>
+
+      <li class="timeline-item reveal reveal-delay-2">
+        <div class="timeline-year" aria-hidden="true">1258 CE</div>
+        <div class="timeline-dot-wrap" aria-hidden="true"><div class="timeline-dot"></div></div>
+        <div>
+          <h3 class="timeline-content-title"><time datetime="1258">1258 CE</time> — Mongol Invasion</h3>
+          <p class="timeline-content-desc">Hulagu Khan sacks Baghdad, destroying the Grand Library. Centuries of scholarship perish in the Tigris. Yet the city endures — and slowly, magnificently, rebuilds.</p>
+        </div>
+      </li>
+
+      <li class="timeline-item reveal reveal-delay-3">
+        <div class="timeline-year" aria-hidden="true">1920 CE</div>
+        <div class="timeline-dot-wrap" aria-hidden="true"><div class="timeline-dot"></div></div>
+        <div>
+          <h3 class="timeline-content-title"><time datetime="1920">1920 CE</time> — Modern Iraq</h3>
+          <p class="timeline-content-desc">The Kingdom of Iraq is proclaimed. Baghdad re-emerges as a modern capital, blending its ancient identity with the ambitions of an independent Arab nation.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+
+<!-- GEO DIVIDER -->
+<div class="geo-divider" style="background:#121C38;" aria-hidden="true">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;" role="presentation">
+    <rect width="100%" height="100%" fill="url(#dp1)"/>
+    <line x1="0" y1="30" x2="1440" y2="30" stroke="#E8B86D" stroke-width="0.5" opacity="0.15"/>
+  </svg>
+  <div class="geo-divider-diamond"><div class="geo-divider-dot"></div></div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     SITES
+════════════════════════════════════════════════════════════ -->
+<section id="sites" aria-labelledby="sites-heading">
+  <div class="sites-inner">
+    <div class="section-label reveal" aria-hidden="true">
+      <div class="section-label-line"></div>
+      <span class="section-label-text">03 — Heritage Sites</span>
+    </div>
+    <div class="sites-header">
+      <h2 id="sites-heading" class="sites-heading reveal">Eight sites that define<br><em>a civilisation</em></h2>
+      <p class="sites-sub reveal reveal-delay-2">Each Safari itinerary grants private after-hours access to these monuments, accompanied by the region's foremost historians.</p>
+    </div>
+
+    <div class="sites-grid" role="list" aria-label="Heritage sites of Baghdad">
+
+      <article class="site-card reveal" role="listitem" tabindex="0" aria-label="Iraq Museum heritage site">
+        <img class="site-img" src="images/iraq-museum.jpg" alt="Iraq Museum exterior — white Babylonian-revival facade with palm trees">
+        <div class="site-overlay" aria-hidden="true"></div>
+        <div class="site-info">
+          <p class="site-arabic" lang="ar">المتحف العراقي</p>
+          <h3 class="site-name">Iraq Museum</h3>
+          <p class="site-era">Est. 1926</p>
+          <p class="site-desc">One of the world's great museums — over 170,000 artefacts spanning seven millennia of Mesopotamian civilisation, from Sumerian tablets to Assyrian ivories.</p>
+        </div>
+      </article>
+
+      <article class="site-card reveal reveal-delay-1" role="listitem" tabindex="0" aria-label="Al-Kadhimiya Mosque heritage site">
+        <img class="site-img" src="images/kadhimiya.jpg" alt="Al-Kadhimiya Mosque — golden domes and minarets against the sky">
+        <div class="site-overlay" aria-hidden="true"></div>
+        <div class="site-info">
+          <p class="site-arabic" lang="ar">الكاظمية</p>
+          <h3 class="site-name">Al-Kadhimiya Mosque</h3>
+          <p class="site-era">16th Century</p>
+          <p class="site-desc">A masterpiece of Islamic architecture crowned by four golden minarets and two gilded domes. One of the holiest Shia shrines, drawing millions of pilgrims annually.</p>
+        </div>
+      </article>
+
+      <article class="site-card reveal reveal-delay-2" role="listitem" tabindex="0" aria-label="Arch of Ctesiphon heritage site">
+        <img class="site-img" src="images/ctesiphon.jpg" alt="Arch of Ctesiphon — the great Sassanid brick vault standing in the desert">
+        <div class="site-overlay" aria-hidden="true"></div>
+        <div class="site-info">
+          <p class="site-arabic" lang="ar">طاق كسرى</p>
+          <h3 class="site-name">Arch of Ctesiphon</h3>
+          <p class="site-era">3rd Century CE</p>
+          <p class="site-desc">The largest single-span brick vault ever constructed in antiquity — the sole surviving structure of the great Sassanid capital, 35 km south of Baghdad.</p>
+        </div>
+      </article>
+
+      <article class="site-card reveal reveal-delay-1" role="listitem" tabindex="0" aria-label="Al-Mustansiriya University heritage site">
+        <img class="site-img" src="images/mustansiriya.jpg" alt="Al-Mustansiriya University — medieval courtyard with arched iwan and palm trees">
+        <div class="site-overlay" aria-hidden="true"></div>
+        <div class="site-info">
+          <p class="site-arabic" lang="ar">المستنصرية</p>
+          <h3 class="site-name">Al-Mustansiriya University</h3>
+          <p class="site-era">1227 CE</p>
+          <p class="site-desc">Founded by Caliph al-Mustansir, this medieval madrasa was once the most advanced university in the world, teaching law, medicine, grammar, and mathematics.</p>
+        </div>
+      </article>
+
+      <article class="site-card reveal reveal-delay-2" role="listitem" tabindex="0" aria-label="Abbasid Palace heritage site">
+        <img class="site-img" src="images/abbasid-palace.jpg" alt="Abbasid Palace — brick facade with muqarnas vaulting reflected in water">
+        <div class="site-overlay" aria-hidden="true"></div>
+        <div class="site-info">
+          <p class="site-arabic" lang="ar">القصر العباسي</p>
+          <h3 class="site-name">Abbasid Palace</h3>
+          <p class="site-era">12th Century</p>
+          <p class="site-desc">The last standing monument of the original Round City. Its intricate muqarnas vaulting and geometric stucco screens represent the apogee of Abbasid craftsmanship.</p>
+        </div>
+      </article>
+
+      <article class="site-card reveal reveal-delay-3" role="listitem" tabindex="0" aria-label="Al-Mutanabbi Street heritage site">
+        <img class="site-img" src="images/mutanabbi-street.jpg" alt="Al-Mutanabbi Street lit up at night — historic Baghdad book market boulevard">
+        <div class="site-overlay" aria-hidden="true"></div>
+        <div class="site-info">
+          <p class="site-arabic" lang="ar">شارع المتنبي</p>
+          <h3 class="site-name">Al-Mutanabbi Street</h3>
+          <p class="site-era">Medieval</p>
+          <p class="site-desc">The intellectual soul of Baghdad. Named after the great 10th-century poet, this riverside boulevard is lined with bookshops — a living Friday tradition.</p>
+        </div>
+      </article>
+
+      <article class="site-card reveal reveal-delay-2" role="listitem" tabindex="0" aria-label="Al-Shaheed Monument heritage site">
+        <img class="site-img" src="images/shaheed-monument.jpg" alt="Al-Shaheed Monument — split turquoise dome at sunset against a vivid sky">
+        <div class="site-overlay" aria-hidden="true"></div>
+        <div class="site-info">
+          <p class="site-arabic" lang="ar">نصب الشهيد</p>
+          <h3 class="site-name">Al-Shaheed Monument</h3>
+          <p class="site-era">1983</p>
+          <p class="site-desc">Ismail Fattah al-Turk's iconic split turquoise dome — one of the finest examples of contemporary Arab memorial architecture, overlooking the Tigris.</p>
+        </div>
+      </article>
+
+      <article class="site-card reveal reveal-delay-3" role="listitem" tabindex="0" aria-label="Ancient Babylon heritage site">
+        <img class="site-img" src="images/babylon-ishtar-gate.jpg" alt="Ishtar Gate at Ancient Babylon — blue glazed bricks with lion and dragon reliefs">
+        <div class="site-overlay" aria-hidden="true"></div>
+        <div class="site-info">
+          <p class="site-arabic" lang="ar">بابل</p>
+          <h3 class="site-name">Ancient Babylon</h3>
+          <p class="site-era">1894–539 BCE</p>
+          <p class="site-desc">90 km south of Baghdad — home of Hammurabi, Nebuchadnezzar, and legend. The Ishtar Gate's glazed blue bricks still dazzle across four thousand years.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- GEO DIVIDER -->
+<div class="geo-divider" style="background:#0B1224;" aria-hidden="true">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;" role="presentation">
+    <rect width="100%" height="100%" fill="url(#dp1)"/>
+    <line x1="0" y1="30" x2="1440" y2="30" stroke="#E8B86D" stroke-width="0.5" opacity="0.15"/>
+  </svg>
+  <div class="geo-divider-diamond"><div class="geo-divider-dot"></div></div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     TOURS
+════════════════════════════════════════════════════════════ -->
+<section id="tours" aria-labelledby="tours-heading">
+  <div class="tours-inner">
+    <div class="section-label reveal" aria-hidden="true">
+      <div class="section-label-line"></div>
+      <span class="section-label-text">04 — Tour Packages</span>
+    </div>
+    <h2 id="tours-heading" class="tours-heading reveal">Three ways to experience<br><em>the extraordinary</em></h2>
+
+    <div class="tours-grid" role="list" aria-label="Safari tour packages">
+
+      <!-- Tour 1 -->
+      <article class="tour-card tour-terra reveal" role="listitem">
+        <span class="tour-tag" style="background:#C4622D" aria-label="Most Popular tour">Most Popular</span>
+        <h3 class="tour-name">The Abbasid Grand Tour</h3>
+        <p class="tour-days" style="color:#C4622D">7 Days</p>
+        <p class="tour-desc">The definitive journey through Baghdad's golden age. Private access, Michelin-calibre dining, and stays in the finest heritage properties.</p>
+        <ul class="tour-highlights" aria-label="Tour highlights">
+          <li><span style="display:block;width:4px;height:4px;border-radius:50%;background:#C4622D;flex-shrink:0;" aria-hidden="true"></span>Iraq Museum private access</li>
+          <li><span style="display:block;width:4px;height:4px;border-radius:50%;background:#C4622D;flex-shrink:0;" aria-hidden="true"></span>Abbasid Palace moonlit dinner</li>
+          <li><span style="display:block;width:4px;height:4px;border-radius:50%;background:#C4622D;flex-shrink:0;" aria-hidden="true"></span>Al-Kadhimiya exclusive visit</li>
+          <li><span style="display:block;width:4px;height:4px;border-radius:50%;background:#C4622D;flex-shrink:0;" aria-hidden="true"></span>Expert historian guide throughout</li>
+        </ul>
+        <div class="tour-footer">
+          <span class="tour-price">From $8,200</span>
+          <a href="#contact" class="tour-link" style="color:#C4622D" aria-label="Enquire about The Abbasid Grand Tour">Enquire →</a>
+        </div>
+      </article>
+
+      <!-- Tour 2 -->
+      <article class="tour-card tour-gold reveal reveal-delay-1" role="listitem">
+        <span class="tour-tag" style="background:#E8B86D;color:#0B1224" aria-label="Signature tour">Signature</span>
+        <h3 class="tour-name">Mesopotamian Origins</h3>
+        <p class="tour-days" style="color:#E8B86D">10 Days</p>
+        <p class="tour-desc">An immersive expedition tracing humanity's earliest civilisations — from Sumerian clay tablets to the grandeur of ancient Babylon.</p>
+        <ul class="tour-highlights" aria-label="Tour highlights">
+          <li><span style="display:block;width:4px;height:4px;border-radius:50%;background:#E8B86D;flex-shrink:0;" aria-hidden="true"></span>Ancient Babylon private site visit</li>
+          <li><span style="display:block;width:4px;height:4px;border-radius:50%;background:#E8B86D;flex-shrink:0;" aria-hidden="true"></span>Ctesiphon dawn experience</li>
+          <li><span style="display:block;width:4px;height:4px;border-radius:50%;background:#E8B86D;flex-shrink:0;" aria-hidden="true"></span>Al-Mustansiriya seminar</li>
+          <li><span style="display:block;width:4px;height:4px;border-radius:50%;background:#E8B86D;flex-shrink:0;" aria-hidden="true"></span>Private archaeological briefing</li>
+        </ul>
+        <div class="tour-footer">
+          <span class="tour-price">From $13,500</span>
+          <a href="#contact" class="tour-link" style="color:#E8B86D" aria-label="Enquire about Mesopotamian Origins">Enquire →</a>
+        </div>
+      </article>
+
+      <!-- Tour 3 -->
+      <article class="tour-card tour-emerald reveal reveal-delay-2" role="listitem">
+        <span class="tour-tag" style="background:#1B5E4A" aria-label="New tour">New</span>
+        <h3 class="tour-name">Cultural Immersion</h3>
+        <p class="tour-days" style="color:#1B5E4A">5 Days</p>
+        <p class="tour-desc">A sensory deep-dive into Baghdad's living culture — its poets, craftspeople, markets, and the eternal rhythm of the Tigris.</p>
+        <ul class="tour-highlights" aria-label="Tour highlights">
+          <li><span style="display:block;width:4px;height:4px;border-radius:50%;background:#1B5E4A;flex-shrink:0;" aria-hidden="true"></span>Al-Mutanabbi Street book hunt</li>
+          <li><span style="display:block;width:4px;height:4px;border-radius:50%;background:#1B5E4A;flex-shrink:0;" aria-hidden="true"></span>Traditional craft workshop</li>
+          <li><span style="display:block;width:4px;height:4px;border-radius:50%;background:#1B5E4A;flex-shrink:0;" aria-hidden="true"></span>Riverside culinary journey</li>
+          <li><span style="display:block;width:4px;height:4px;border-radius:50%;background:#1B5E4A;flex-shrink:0;" aria-hidden="true"></span>Sunset Tigris private cruise</li>
+        </ul>
+        <div class="tour-footer">
+          <span class="tour-price">From $5,400</span>
+          <a href="#contact" class="tour-link" style="color:#1B5E4A" aria-label="Enquire about Cultural Immersion tour">Enquire →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     PULL QUOTE
+════════════════════════════════════════════════════════════ -->
+<section id="pullquote" aria-label="Editorial pull quote">
+  <div class="pq-deco" aria-hidden="true">"</div>
+  <div class="pq-inner">
+    <div class="pq-rule" aria-hidden="true"></div>
+    <blockquote class="reveal" cite="The Silk Roads — Peter Frankopan">
+      "Baghdad is not a city you visit — it is a city you are changed by. To walk the banks of the Tigris at dawn is to feel the entire weight of human civilisation settle gently upon your shoulders."
+    </blockquote>
+    <div class="pq-rule" aria-hidden="true"></div>
+    <p class="pq-attr reveal reveal-delay-1">
+      <cite>Sir Peter Frankopan</cite> &mdash; Historian &amp; Author, <em>The Silk Roads</em>
+    </p>
+  </div>
+</section>
+
+
+<!-- GEO DIVIDER -->
+<div class="geo-divider" style="background:#121C38;" aria-hidden="true">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;" role="presentation">
+    <rect width="100%" height="100%" fill="url(#dp1)"/>
+    <line x1="0" y1="30" x2="1440" y2="30" stroke="#E8B86D" stroke-width="0.5" opacity="0.15"/>
+  </svg>
+  <div class="geo-divider-diamond"><div class="geo-divider-dot"></div></div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     CULTURE
+════════════════════════════════════════════════════════════ -->
+<section id="culture" aria-labelledby="culture-heading">
+  <div class="culture-inner">
+    <div class="section-label reveal" aria-hidden="true">
+      <div class="section-label-line"></div>
+      <span class="section-label-text">05 — Living Culture</span>
+    </div>
+    <h2 id="culture-heading" class="culture-heading reveal">Beyond monuments —<br><em>a living civilisation</em></h2>
+
+    <div class="culture-grid" role="list" aria-label="Cultural aspects of Baghdad">
+      <article class="culture-card reveal" role="listitem">
+        <div class="culture-icon" aria-hidden="true"><span class="culture-icon-inner">◈</span></div>
+        <h3 class="culture-title">Culinary Arts</h3>
+        <p class="culture-desc">From slow-cooked masgouf river carp on the banks of the Tigris to centuries-old samoon bread baked at dawn — Baghdad's cuisine is a sensory time machine.</p>
+      </article>
+      <article class="culture-card reveal reveal-delay-1" role="listitem">
+        <div class="culture-icon" aria-hidden="true"><span class="culture-icon-inner">◈</span></div>
+        <h3 class="culture-title">Living Poetry</h3>
+        <p class="culture-desc">Al-Mutanabbi's verse still reverberates through Baghdad's streets. Every Friday, poets and scholars gather at the book market named in his honour.</p>
+      </article>
+      <article class="culture-card reveal reveal-delay-2" role="listitem">
+        <div class="culture-icon" aria-hidden="true"><span class="culture-icon-inner">◈</span></div>
+        <h3 class="culture-title">Islamic Geometry</h3>
+        <p class="culture-desc">The intricate geometric patterns adorning Baghdad's mosques encode mathematical principles rediscovered by Europe five centuries later.</p>
+      </article>
+      <article class="culture-card reveal reveal-delay-1" role="listitem">
+        <div class="culture-icon" aria-hidden="true"><span class="culture-icon-inner">◈</span></div>
+        <h3 class="culture-title">Artisan Crafts</h3>
+        <p class="culture-desc">Copper-beating, carpet-weaving, ceramic painting — Baghdad's artisan quarters carry living techniques unchanged since the Abbasid golden age.</p>
+      </article>
+      <article class="culture-card reveal reveal-delay-2" role="listitem">
+        <div class="culture-icon" aria-hidden="true"><span class="culture-icon-inner">◈</span></div>
+        <h3 class="culture-title">Music &amp; Maqam</h3>
+        <p class="culture-desc">Iraqi maqam — recognised by UNESCO — is among the world's most sophisticated musical traditions, rooted in millennia of Mesopotamian sound.</p>
+      </article>
+      <article class="culture-card reveal reveal-delay-3" role="listitem">
+        <div class="culture-icon" aria-hidden="true"><span class="culture-icon-inner">◈</span></div>
+        <h3 class="culture-title">Hospitality</h3>
+        <p class="culture-desc">Iraqi qahwa (cardamom coffee) and the ancient tradition of gathering — the majlis — remain the beating heart of Baghdad social life.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- GEO DIVIDER -->
+<div class="geo-divider" style="background:#0B1224;" aria-hidden="true">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;" role="presentation">
+    <rect width="100%" height="100%" fill="url(#dp1)"/>
+    <line x1="0" y1="30" x2="1440" y2="30" stroke="#E8B86D" stroke-width="0.5" opacity="0.15"/>
+  </svg>
+  <div class="geo-divider-diamond"><div class="geo-divider-dot"></div></div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════════════════════════ -->
+<section id="testimonials" aria-labelledby="testimonials-heading">
+  <div class="testimonials-inner">
+    <div class="section-label reveal" aria-hidden="true">
+      <div class="section-label-line"></div>
+      <span class="section-label-text">06 — Guest Voices</span>
+    </div>
+    <h2 id="testimonials-heading" class="testimonials-heading reveal">What our guests say</h2>
+
+    <div class="testimonials-grid" role="list" aria-label="Guest testimonials">
+      <article class="testimonial-card reveal" role="listitem">
+        <div class="testimonial-mark" aria-hidden="true">"</div>
+        <blockquote class="testimonial-body">Safari's Baghdad programme is unlike anything else in luxury travel. The private dawn access to Ctesiphon — watching the arch turn from charcoal to amber in the first light — was a moment I will carry for the rest of my life.</blockquote>
+        <div class="testimonial-div">
+          <p class="testimonial-name">Charlotte Pemberton</p>
+          <p class="testimonial-role">Travel Correspondent, <cite>Condé Nast Traveller</cite></p>
+        </div>
+      </article>
+      <article class="testimonial-card reveal reveal-delay-1" role="listitem">
+        <div class="testimonial-mark" aria-hidden="true">"</div>
+        <blockquote class="testimonial-body">As a professional archaeologist I was sceptical. Safari exceeded every expectation — the depth of historical briefings, the quality of local experts, and the sheer intelligence of the itinerary design is exceptional.</blockquote>
+        <div class="testimonial-div">
+          <p class="testimonial-name">Dr. Ramón Alcázar</p>
+          <p class="testimonial-role">Archaeological Fellow, <cite>Harvard University</cite></p>
+        </div>
+      </article>
+      <article class="testimonial-card reveal reveal-delay-2" role="listitem">
+        <div class="testimonial-mark" aria-hidden="true">"</div>
+        <blockquote class="testimonial-body">Baghdad deserves the world's finest tourism company, and Safari delivers precisely that. They tell the story of my region's history with reverence, accuracy, and magnificent production.</blockquote>
+        <div class="testimonial-div">
+          <p class="testimonial-name">Amira Al-Hassan</p>
+          <p class="testimonial-role">CEO, <cite>Gulf Heritage Foundation</cite></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     TRAVEL TIPS
+════════════════════════════════════════════════════════════ -->
+<section id="tips" aria-labelledby="tips-heading">
+  <div class="tips-inner">
+    <div class="section-label reveal" aria-hidden="true">
+      <div class="section-label-line"></div>
+      <span class="section-label-text">07 — Travel Intelligence</span>
+    </div>
+    <h2 id="tips-heading" class="tips-heading reveal">Essential knowledge<br><em>before you arrive</em></h2>
+
+    <div class="tips-grid" role="list" aria-label="Travel tips for Baghdad">
+      <article class="tip-card reveal" role="listitem">
+        <h3 class="tip-title">Best Time to Visit</h3>
+        <p class="tip-text">October through April, when temperatures range from a pleasant 15–25°C. Avoid June–August when Baghdad can exceed 50°C.</p>
+      </article>
+      <article class="tip-card reveal reveal-delay-1" role="listitem">
+        <h3 class="tip-title">Dress Code</h3>
+        <p class="tip-text">Conservative dress is respectful and required at religious sites. Safari provides tailored local dress for all guests for authentic experiences.</p>
+      </article>
+      <article class="tip-card reveal reveal-delay-2" role="listitem">
+        <h3 class="tip-title">Currency</h3>
+        <p class="tip-text">Iraqi Dinar (IQD). Safari arranges pre-loaded safari cards and all payments at partner properties are handled seamlessly on your behalf.</p>
+      </article>
+      <article class="tip-card reveal reveal-delay-1" role="listitem">
+        <h3 class="tip-title">Photography</h3>
+        <p class="tip-text">Always request permission before photographing people. Our guides navigate local customs to ensure you capture extraordinary images respectfully.</p>
+      </article>
+      <article class="tip-card reveal reveal-delay-2" role="listitem">
+        <h3 class="tip-title">Health &amp; Safety</h3>
+        <p class="tip-text">Safari travels with dedicated security advisors and medical support. All itineraries are live-monitored 24/7 by our Baghdad operations centre.</p>
+      </article>
+      <article class="tip-card reveal reveal-delay-3" role="listitem">
+        <h3 class="tip-title">Connectivity</h3>
+        <p class="tip-text">Safari provides a private VSAT internet satellite device for each group — reliable connectivity anywhere in Iraq, including the most remote sites.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- GEO DIVIDER -->
+<div class="geo-divider" style="background:#0B1224;" aria-hidden="true">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;" role="presentation">
+    <rect width="100%" height="100%" fill="url(#dp1)"/>
+    <line x1="0" y1="30" x2="1440" y2="30" stroke="#E8B86D" stroke-width="0.5" opacity="0.15"/>
+  </svg>
+  <div class="geo-divider-diamond"><div class="geo-divider-dot"></div></div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════════════════ -->
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="contact-inner">
+    <div class="section-label reveal" aria-hidden="true">
+      <div class="section-label-line"></div>
+      <span class="section-label-text">08 — Private Enquiry</span>
+    </div>
+    <div class="contact-grid">
+      <!-- Info column -->
+      <div>
+        <h2 id="contact-heading" class="contact-heading reveal">Begin your<br><em>Baghdad journey</em></h2>
+        <p class="contact-body reveal reveal-delay-1">Each Safari programme is entirely bespoke. Our Baghdad specialists — available seven days a week — will design an itinerary around your interests, dates, and group.</p>
+        <div class="reveal reveal-delay-2">
+          <div class="contact-info-row">
+            <span class="contact-info-label">Private Line</span>
+            <span class="contact-info-val">+44 20 7946 0000</span>
+          </div>
+          <div class="contact-info-row">
+            <span class="contact-info-label">Enquiries</span>
+            <span class="contact-info-val">baghdad@safaritravel.com</span>
+          </div>
+          <div class="contact-info-row">
+            <span class="contact-info-label">Hours</span>
+            <span class="contact-info-val">24 hours &middot; 7 days</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form — UX: all inputs have label[for], aria-required, role=alert for errors -->
+      <form id="contact-form" onsubmit="return handleSubmit(event);" novalidate class="reveal reveal-delay-1">
+        <!-- Success message (accessibility: role=alert announced to screen readers) -->
+        <div id="form-success" class="form-success" role="alert" aria-live="polite">
+          ✓ Thank you. A Safari specialist will contact you within 24 hours.
+        </div>
+
+        <!-- Full Name -->
+        <div class="form-field">
+          <input class="form-input" type="text" id="f-name" name="name"
+            placeholder=" " autocomplete="name"
+            aria-required="true" aria-describedby="f-name-err" />
+          <label class="form-label" for="f-name">Full Name</label>
+          <span id="f-name-err" class="form-error" role="alert" aria-live="polite"></span>
+        </div>
+
+        <!-- Email -->
+        <div class="form-field">
+          <input class="form-input" type="email" id="f-email" name="email"
+            placeholder=" " autocomplete="email"
+            aria-required="true" aria-describedby="f-email-err" />
+          <label class="form-label" for="f-email">Email Address</label>
+          <span id="f-email-err" class="form-error" role="alert" aria-live="polite"></span>
+        </div>
+
+        <!-- Tour selection — select with placeholder label -->
+        <div class="form-field">
+          <label class="form-label" for="f-tour" style="position:static;font-size:0.6rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:0.5rem;">
+            Tour Package
+          </label>
+          <select class="form-input" id="f-tour" name="tour" style="padding-top:0.65rem;"
+            aria-required="false">
+            <option value="">Select tour package</option>
+            <option value="abbasid">The Abbasid Grand Tour — 7 Days</option>
+            <option value="mesopotamian">Mesopotamian Origins — 10 Days</option>
+            <option value="cultural">Cultural Immersion — 5 Days</option>
+            <option value="bespoke">Fully Bespoke</option>
+          </select>
+        </div>
+
+        <!-- Dates & Guests -->
+        <div class="form-row">
+          <div class="form-field">
+            <input class="form-input" type="text" id="f-dates" name="dates"
+              placeholder="e.g. March 2026" autocomplete="off" />
+            <label class="form-label" for="f-dates">Preferred Dates</label>
+          </div>
+          <div class="form-field">
+            <input class="form-input" type="number" id="f-guests" name="guests"
+              placeholder=" " min="1" max="50" autocomplete="off" />
+            <label class="form-label" for="f-guests">No. of Guests</label>
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div class="form-field">
+          <textarea class="form-input" id="f-msg" name="message" rows="4"
+            placeholder=" " aria-label="Tell us about your ideal journey"></textarea>
+          <label class="form-label" for="f-msg">Your ideal journey…</label>
+        </div>
+
+        <button type="submit" class="form-btn" id="form-submit" aria-label="Send private enquiry to Safari">
+          Send Private Enquiry
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main><!-- /#main-content -->
+
+
+<!-- ════════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer id="footer" role="contentinfo">
+  <div class="footer-glow" aria-hidden="true"></div>
+  <!-- Background geo -->
+  <svg style="position:absolute;inset:0;width:100%;height:100%;opacity:0.03;pointer-events:none;" aria-hidden="true">
+    <defs>
+      <pattern id="footerGeo" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+        <polygon points="60,5 115,32.5 115,87.5 60,115 5,87.5 5,32.5" fill="none" stroke="#E8B86D" stroke-width="1"/>
+        <polygon points="60,25 95,42.5 95,77.5 60,95 25,77.5 25,42.5" fill="none" stroke="#E8B86D" stroke-width="0.5"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#footerGeo)"/>
+  </svg>
+
+  <div style="position:relative;max-width:1300px;margin:0 auto;">
+    <div class="footer-watermark" aria-hidden="true">
+      <p class="footer-arabic" lang="ar">سفاري · بغداد</p>
+      <div class="footer-big">SAFARI</div>
+    </div>
+
+    <div class="footer-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem;">
+          <div class="nav-logo-dots" aria-hidden="true">
+            <span style="background:#E8B86D"></span>
+            <span style="background:#C4622D"></span>
+            <span style="background:#E8B86D"></span>
+          </div>
+          <span class="nav-logo-text">SAFARI</span>
+        </div>
+        <p class="footer-about-text">The world's most prestigious private travel company. Curating extraordinary journeys through history's greatest civilisations since 1987.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="Destinations">
+        <p class="footer-col-title">Destinations</p>
+        <ul role="list">
+          <li><a href="#sites">Baghdad</a></li>
+          <li><a href="#sites">Babylon</a></li>
+          <li><a href="#sites">Ctesiphon</a></li>
+          <li><a href="#">Mosul</a></li>
+          <li><a href="#">Basra</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Company">
+        <p class="footer-col-title">Company</p>
+        <ul role="list">
+          <li><a href="#">About Safari</a></li>
+          <li><a href="#">Our Guides</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Partnerships</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Support">
+        <p class="footer-col-title">Support</p>
+        <ul role="list">
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Booking Terms</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 Safari Travel. All rights reserved.</p>
+      <p class="footer-copy">Crafted with reverence for Baghdad and its people</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
